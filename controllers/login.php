@@ -86,7 +86,7 @@
 			   $this->load->model('add_user');
 			   $email = $usernode['name'];
 			   //echo $usernode['email'];
-			 //  if(!($this->add_user->already_exists($email)))
+			   if(!($this->add_user->already_exists($email)))
 			   		$this->add_user->add_users($usernode->getName(), $email);
 			   $this->load->view('includes/template', $data);
 			   // Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
